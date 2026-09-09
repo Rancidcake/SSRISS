@@ -1,0 +1,84 @@
+{
+  "https://www.jnu.ac.in": {
+    "requested_url": "https://www.jnu.ac.in",
+    "final_url": "https://www.jnu.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": 135580,
+    "is_html": true,
+    "redirect_history": [],
+    "selected_response_headers": {
+      "Server": "Apache",
+      "Date": "Wed, 09 Sep 2026 14:46:51 GMT",
+      "Cache-Control": "must-revalidate, no-cache, private",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    },
+    "first_200_characters_of_body": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n",
+    "error": null
+  },
+  "http://www.jnu.ac.in": {
+    "requested_url": "http://www.jnu.ac.in",
+    "final_url": "http://www.jnu.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": 135578,
+    "is_html": true,
+    "redirect_history": [],
+    "selected_response_headers": {
+      "Server": "Apache",
+      "Date": "Wed, 09 Sep 2026 14:47:02 GMT",
+      "Cache-Control": "must-revalidate, no-cache, private"
+    },
+    "first_200_characters_of_body": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n",
+    "error": null
+  },
+  "https://httpbin.org/json": {
+    "requested_url": "https://httpbin.org/json",
+    "final_url": "https://httpbin.org/json",
+    "status_code": 200,
+    "content_type": "application/json",
+    "content_length": 429,
+    "is_html": false,
+    "redirect_history": [],
+    "selected_response_headers": {
+      "Server": "gunicorn/19.9.0",
+      "Date": "Wed, 09 Sep 2026 16:58:21 GMT"
+    },
+    "first_200_characters_of_body": "{\n  \"slideshow\": {\n    \"author\": \"Yours Truly\", \n    \"date\": \"date of publication\", \n    \"slides\": [\n      {\n        \"title\": \"Wake up to WonderWidgets!\", \n        \"type\": \"all\"\n      }, \n      {\n    ",
+    "error": null
+  },
+  "https://www.jnu.ac.in/nonexistent_page_12345": {
+    "requested_url": "https://www.jnu.ac.in/nonexistent_page_12345",
+    "final_url": "https://www.jnu.ac.in/nonexistent_page_12345",
+    "status_code": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": 46691,
+    "is_html": true,
+    "redirect_history": [],
+    "selected_response_headers": {
+      "Server": "Apache",
+      "Date": "Wed, 09 Sep 2026 16:58:22 GMT",
+      "Cache-Control": "must-revalidate, no-cache, private",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    },
+    "first_200_characters_of_body": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n",
+    "error": null
+  },
+  "https://www.jnu.ac.in/robots.txt": {
+    "requested_url": "https://www.jnu.ac.in/robots.txt",
+    "final_url": "https://www.jnu.ac.in/robots.txt",
+    "status_code": 200,
+    "content_type": "text/plain; charset=UTF-8",
+    "content_length": 2027,
+    "is_html": false,
+    "redirect_history": [],
+    "selected_response_headers": {
+      "Server": "Apache",
+      "Date": "Wed, 09 Sep 2026 16:58:22 GMT",
+      "Cache-Control": "max-age=31536000",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    },
+    "first_200_characters_of_body": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where ",
+    "error": null
+  }
+}

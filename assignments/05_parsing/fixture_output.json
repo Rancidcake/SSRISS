@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Symposium on AI in Healthcare Infrastructure",
+    "item_url": "https://example.university.edu/events/ai-in-healthcare-2026.html",
+    "item_type": "html_notice",
+    "date_raw": "15 September 2026",
+    "speaker_raw": "Dr. Aris Thorne",
+    "location_raw": "Main Academic Auditorium, Room 101",
+    "raw_text": "Keynote discussion on machine learning applications in diagnostic pathology."
+  },
+  {
+    "title": "Circular: Monsoon Semester Course Registration Deadline Extension",
+    "item_url": "https://example.university.edu/docs/circulars/Monsoon_Semester_Registration_2026.pdf",
+    "item_type": "pdf_notice",
+    "date_raw": "12 September 2026",
+    "speaker_raw": "Office of the Registrar",
+    "location_raw": "Administrative Block",
+    "raw_text": "Official circular detailing the extended timeline for add/drop courses."
+  },
+  {
+    "title": "Hands-On Quantum Computing Workshop",
+    "item_url": "https://example.university.edu/events/quantum-computing-workshop.html",
+    "item_type": "html_notice",
+    "date_raw": "20 September 2026",
+    "speaker_raw": null,
+    "location_raw": "School of Computer & Systems Sciences, Lab 3",
+    "raw_text": "Interactive tutorial covering Qiskit and quantum circuit simulation."
+  },
+  {
+    "title": "Revised Academic Fee Payment Guidelines for AY 2026-27",
+    "item_url": "https://example.university.edu/downloads/notices/Fee_Structure_Revised_2026_27.pdf",
+    "item_type": "pdf_notice",
+    "date_raw": "08 September 2026",
+    "speaker_raw": "Finance Officer",
+    "location_raw": "Finance Division",
+    "raw_text": "Detailed schedule and portal instructions for hostel and tuition fee payment."
+  },
+  {
+    "title": "Annual Distinguished Public Lecture on Macroeconomics",
+    "item_url": "https://example.university.edu/events/annual-distinguished-lecture-economics.html",
+    "item_type": "html_notice",
+    "date_raw": "25 September 2026",
+    "speaker_raw": "Prof. Elena Rostova",
+    "location_raw": "Convention Centre Hall B",
+    "raw_text": "Exploration of global trade dynamics and fiscal policy shifts."
+  },
+  {
+    "title": "Provisional Hostel Allotment List (Monsoon Semester 2026)",
+    "item_url": "https://example.university.edu/notices/pdf/Hostel_Allotment_List_Monsoon_2026.pdf",
+    "item_type": "pdf_notice",
+    "date_raw": "05 September 2026",
+    "speaker_raw": "Dean of Students",
+    "location_raw": "DOS Office",
+    "raw_text": "List of allotted room numbers and physical verification requirements."
+  },
+  {
+    "title": "International Seminar on Climate Resilience & Sustainability",
+    "item_url": "https://example.university.edu/events/climate-resilience-seminar.html",
+    "item_type": "html_notice",
+    "date_raw": "02 October 2026",
+    "speaker_raw": "Dr. Marcus Vance",
+    "location_raw": null,
+    "raw_text": "Panel presentation on urban ecological adaptation."
+  },
+  {
+    "title": "Mid-Semester Examination Schedule for School of Physical Sciences",
+    "item_url": "https://example.university.edu/sites/default/files/inline-files/Mid_Semester_Exam_Schedule_2026.pdf",
+    "item_type": "pdf_notice",
+    "date_raw": "01 September 2026",
+    "speaker_raw": "Controller of Examinations",
+    "location_raw": "SPS Lecture Complex",
+    "raw_text": "Official timetable for mid-semester evaluations across undergraduate programs."
+  }
+]
