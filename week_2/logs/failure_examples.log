@@ -1,0 +1,53 @@
+2026-09-26 15:52:22,152 INFO     ========== SCENARIO 1. invalid URL ==========
+2026-09-26 15:52:22,152 INFO     START source=jnu_notices run_id=a41dc337 url=htp://www.jnu.ac.in/notices capabilities=listing,pagination
+2026-09-26 15:52:22,152 ERROR    FAILED source=jnu_notices run_id=a41dc337 stage=fetch url=htp://www.jnu.ac.in/notices error_type=FetchError message=invalid URL (scheme 'htp' not supported)
+2026-09-26 15:52:22,157 INFO     END source=jnu_notices run_id=a41dc337 status=failed duration_ms=0
+2026-09-26 15:52:22,157 INFO     ========== SCENARIO 2. connection failure (DNS) ==========
+2026-09-26 15:52:22,157 INFO     START source=jnu_notices run_id=c1f1061b url=https://www.jnu-does-not-exist.invalid/notices capabilities=listing,pagination
+2026-09-26 15:52:22,205 ERROR    FAILED source=jnu_notices run_id=c1f1061b stage=fetch url=https://www.jnu-does-not-exist.invalid/notices error_type=FetchError message=connection failed: ConnectionError: HTTPSConnectionPool(host='www.jnu-does-not-exist.invalid', port=443): Max retries exceeded with url: /notices (Caused by NameResolutionError("HTTPSConnection(host='www.jnu-does-not-exist.invalid', por...
+2026-09-26 15:52:22,206 INFO     END source=jnu_notices run_id=c1f1061b status=failed duration_ms=48
+2026-09-26 15:52:22,206 INFO     ========== SCENARIO 3. HTTP 404 on the listing ==========
+2026-09-26 15:52:22,207 INFO     START source=jnu_notices run_id=ccabbc75 url=https://www.jnu.ac.in/events capabilities=listing,pagination
+2026-09-26 15:52:23,461 INFO     FETCH url=https://www.jnu.ac.in/events status=404 duration_ms=250
+2026-09-26 15:52:23,461 ERROR    FAILED source=jnu_notices run_id=ccabbc75 stage=fetch url=https://www.jnu.ac.in/events error_type=FetchError message=HTTP 404
+2026-09-26 15:52:23,466 INFO     END source=jnu_notices run_id=ccabbc75 status=failed duration_ms=1255
+2026-09-26 15:52:23,466 INFO     ========== SCENARIO 4a. parser receives unexpected HTML (wrong page) ==========
+2026-09-26 15:52:23,466 INFO     START source=jnu_notices run_id=bd02be47 url=https://www.jnu.ac.in/about-us capabilities=listing,pagination
+2026-09-26 15:52:24,662 INFO     FETCH url=https://www.jnu.ac.in/about-us status=200 duration_ms=196
+2026-09-26 15:52:24,706 ERROR    FAILED source=jnu_notices run_id=bd02be47 stage=parse url=https://www.jnu.ac.in/about-us error_type=ParseError message=listing container 'div.view-id-notices' not found - page structure changed or this is not the expected page
+2026-09-26 15:52:24,707 INFO     END source=jnu_notices run_id=bd02be47 status=failed duration_ms=1240
+2026-09-26 15:52:24,707 INFO     ========== SCENARIO 4b. parser receives changed layout (cards instead of table) ==========
+2026-09-26 15:52:24,707 INFO     START source=jnu_notices run_id=46c22902 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/jnu/notices/changed_card_structure.html capabilities=listing,pagination
+2026-09-26 15:52:24,708 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/jnu/notices/changed_card_structure.html status=200 duration_ms=0
+2026-09-26 15:52:24,711 ERROR    FAILED source=jnu_notices run_id=46c22902 stage=parse url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/jnu/notices/changed_card_structure.html error_type=ParseError message=div.view-id-notices has .view-content but no table rows - listing layout changed (cards/divs instead of a table?)
+2026-09-26 15:52:24,712 INFO     END source=jnu_notices run_id=46c22902 status=failed duration_ms=3
+2026-09-26 15:52:24,712 INFO     ========== SCENARIO 5. empty listing (real JNU empty page) ==========
+2026-09-26 15:52:24,712 INFO     START source=jnu_events run_id=b002e9a8 url=https://www.jnu.ac.in/jnuevents?page=1 capabilities=listing,pagination,detail
+2026-09-26 15:52:25,888 INFO     FETCH url=https://www.jnu.ac.in/jnuevents?page=1 status=200 duration_ms=220
+2026-09-26 15:52:25,900 INFO     PARSE source=jnu_events page=1 url=https://www.jnu.ac.in/jnuevents?page=1 records=0
+2026-09-26 15:52:25,900 INFO     PAGINATION source=jnu_events pages=1 records=0 duplicates=0 stop=empty_page
+2026-09-26 15:52:25,900 WARNING  EMPTY source=jnu_events url=https://www.jnu.ac.in/jnuevents?page=1 stage=parse message=listing returned 0 records (page empty or selectors no longer match)
+2026-09-26 15:52:25,900 INFO     NORMALIZE source=jnu_events records=0 skipped=0
+2026-09-26 15:52:25,901 INFO     STORE source=jnu_events new=0 existing=0 changed=0
+2026-09-26 15:52:25,904 INFO     END source=jnu_events run_id=b002e9a8 status=success duration_ms=1189
+2026-09-26 15:52:25,904 INFO     ========== SCENARIO 6. database write problem (db path is a directory) ==========
+2026-09-26 15:52:25,904 INFO     START source=jnu_notices run_id=09ec9e8d url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html capabilities=listing,pagination
+2026-09-26 15:52:25,905 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html status=200 duration_ms=0
+2026-09-26 15:52:25,907 INFO     PARSE source=jnu_notices page=1 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html records=5
+2026-09-26 15:52:25,907 INFO     PAGINATION source=jnu_notices pages=1 records=5 duplicates=0 stop=max_pages
+2026-09-26 15:52:25,908 INFO     NORMALIZE source=jnu_notices records=5 skipped=0
+2026-09-26 15:52:25,908 ERROR    FAILED source=jnu_notices run_id=09ec9e8d stage=store url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html error_type=StorageError message=cannot open database /Users/mayank/Documents/SSRISS/week_2/data: OperationalError: unable to open database file
+2026-09-26 15:52:25,908 INFO     END source=jnu_notices run_id=09ec9e8d status=failed duration_ms=3
+2026-09-26 15:52:25,908 INFO     ========== SCENARIO 7. one detail page 404s (URL rewritten to a node that does not exist) ==========
+2026-09-26 15:52:25,908 INFO     START source=jnu_events run_id=fa882ef5 url=https://www.jnu.ac.in/jnuevents capabilities=listing,pagination,detail
+2026-09-26 15:52:27,103 INFO     FETCH url=https://www.jnu.ac.in/jnuevents status=200 duration_ms=210
+2026-09-26 15:52:27,132 INFO     PARSE source=jnu_events page=1 url=https://www.jnu.ac.in/jnuevents records=13
+2026-09-26 15:52:27,132 INFO     PAGINATION source=jnu_events pages=1 records=13 duplicates=0 stop=max_pages
+2026-09-26 15:52:28,302 INFO     FETCH url=https://www.jnu.ac.in/node/159898390 status=200 duration_ms=193
+2026-09-26 15:52:29,997 INFO     FETCH url=https://www.jnu.ac.in/node/999999999 status=404 duration_ms=689
+2026-09-26 15:52:29,997 WARNING  DETAIL_FAILED source=jnu_events stage=detail url=https://www.jnu.ac.in/node/159898442 error_type=FetchError status=404 message=HTTP 404 (listing record kept)
+2026-09-26 15:52:31,244 INFO     FETCH url=https://www.jnu.ac.in/node/159898416 status=200 duration_ms=242
+2026-09-26 15:52:31,268 INFO     DETAIL source=jnu_events attempted=3 ok=2 failed=1
+2026-09-26 15:52:31,269 INFO     NORMALIZE source=jnu_events records=13 skipped=0
+2026-09-26 15:52:31,272 INFO     STORE source=jnu_events new=13 existing=0 changed=0
+2026-09-26 15:52:31,273 INFO     END source=jnu_events run_id=fa882ef5 status=success duration_ms=5363

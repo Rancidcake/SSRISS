@@ -1,0 +1,23 @@
+{
+  "jnu_notices": {
+    "comment": "Notices change several times a week; every 6h is plenty and polite.",
+    "enabled": true,
+    "trigger": "interval",
+    "hours": 6
+  },
+  "jnu_events": {
+    "comment": "Upcoming events list is short; twice a day, detail pages capped by detail_limit.",
+    "enabled": true,
+    "trigger": "cron",
+    "hour": "8,20",
+    "minute": 0
+  },
+  "jnu_events_archive": {
+    "comment": "History barely changes; weekly, only the first max_pages pages.",
+    "enabled": false,
+    "trigger": "cron",
+    "day_of_week": "mon",
+    "hour": 3,
+    "minute": 0
+  }
+}

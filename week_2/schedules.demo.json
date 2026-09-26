@@ -1,0 +1,9 @@
+{
+  "jnu_notices_fixture": {
+    "comment": "Offline demo: crawls the local pagination fixture every 3 seconds.",
+    "enabled": true,
+    "trigger": "interval",
+    "seconds": 3,
+    "run_immediately": true
+  }
+}

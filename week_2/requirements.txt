@@ -1,0 +1,5 @@
+requests==2.32.3
+beautifulsoup4==4.15.0
+pytest==8.4.1
+# Pinned on purpose: APScheduler 4.x has a completely different API.
+APScheduler==3.10.4

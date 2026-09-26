@@ -1,0 +1,55 @@
+2026-09-26 15:52:37,387 INFO     SCHEDULE source=jnu_notices_fixture trigger=interval args={'seconds': 3}
+2026-09-26 15:52:37,388 INFO     SCHEDULER started (demo, 10s) config=schedules.demo.json
+2026-09-26 15:52:37,388 INFO     START source=jnu_notices_fixture run_id=9e485e72 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html capabilities=listing,pagination
+2026-09-26 15:52:37,389 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html status=200 duration_ms=0
+2026-09-26 15:52:37,397 INFO     PARSE source=jnu_notices_fixture page=1 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html records=5
+2026-09-26 15:52:37,399 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html status=200 duration_ms=0
+2026-09-26 15:52:37,401 INFO     PARSE source=jnu_notices_fixture page=2 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html records=5
+2026-09-26 15:52:37,401 INFO     DUPLICATE source=jnu_notices_fixture item_url=https://www.jnu.ac.in/sites/default/files/inline-files/library.pdf page=2 (skipped)
+2026-09-26 15:52:37,403 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html status=200 duration_ms=0
+2026-09-26 15:52:37,405 INFO     PARSE source=jnu_notices_fixture page=3 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html records=5
+2026-09-26 15:52:37,406 INFO     PAGINATION source=jnu_notices_fixture pages=3 records=14 duplicates=1 stop=no_next
+2026-09-26 15:52:37,407 INFO     NORMALIZE source=jnu_notices_fixture records=14 skipped=0
+2026-09-26 15:52:37,410 INFO     STORE source=jnu_notices_fixture new=14 existing=0 changed=0
+2026-09-26 15:52:37,411 INFO     END source=jnu_notices_fixture run_id=9e485e72 status=success duration_ms=21
+2026-09-26 15:52:37,411 INFO     SCHEDULED_RUN source=jnu_notices_fixture status=success new=14 changed=0 existing=0
+2026-09-26 15:52:40,393 INFO     START source=jnu_notices_fixture run_id=7507a6df url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html capabilities=listing,pagination
+2026-09-26 15:52:40,395 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html status=200 duration_ms=0
+2026-09-26 15:52:40,404 INFO     PARSE source=jnu_notices_fixture page=1 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html records=5
+2026-09-26 15:52:40,406 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html status=200 duration_ms=0
+2026-09-26 15:52:40,408 INFO     PARSE source=jnu_notices_fixture page=2 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html records=5
+2026-09-26 15:52:40,408 INFO     DUPLICATE source=jnu_notices_fixture item_url=https://www.jnu.ac.in/sites/default/files/inline-files/library.pdf page=2 (skipped)
+2026-09-26 15:52:40,410 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html status=200 duration_ms=0
+2026-09-26 15:52:40,412 INFO     PARSE source=jnu_notices_fixture page=3 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html records=5
+2026-09-26 15:52:40,414 INFO     PAGINATION source=jnu_notices_fixture pages=3 records=14 duplicates=1 stop=no_next
+2026-09-26 15:52:40,414 INFO     NORMALIZE source=jnu_notices_fixture records=14 skipped=0
+2026-09-26 15:52:40,416 INFO     STORE source=jnu_notices_fixture new=0 existing=14 changed=0
+2026-09-26 15:52:40,418 INFO     END source=jnu_notices_fixture run_id=7507a6df status=success duration_ms=23
+2026-09-26 15:52:40,418 INFO     SCHEDULED_RUN source=jnu_notices_fixture status=success new=0 changed=0 existing=14
+2026-09-26 15:52:43,393 INFO     START source=jnu_notices_fixture run_id=ab3efb68 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html capabilities=listing,pagination
+2026-09-26 15:52:43,395 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html status=200 duration_ms=0
+2026-09-26 15:52:43,400 INFO     PARSE source=jnu_notices_fixture page=1 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html records=5
+2026-09-26 15:52:43,403 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html status=200 duration_ms=0
+2026-09-26 15:52:43,406 INFO     PARSE source=jnu_notices_fixture page=2 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html records=5
+2026-09-26 15:52:43,406 INFO     DUPLICATE source=jnu_notices_fixture item_url=https://www.jnu.ac.in/sites/default/files/inline-files/library.pdf page=2 (skipped)
+2026-09-26 15:52:43,409 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html status=200 duration_ms=0
+2026-09-26 15:52:43,411 INFO     PARSE source=jnu_notices_fixture page=3 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html records=5
+2026-09-26 15:52:43,413 INFO     PAGINATION source=jnu_notices_fixture pages=3 records=14 duplicates=1 stop=no_next
+2026-09-26 15:52:43,414 INFO     NORMALIZE source=jnu_notices_fixture records=14 skipped=0
+2026-09-26 15:52:43,416 INFO     STORE source=jnu_notices_fixture new=0 existing=14 changed=0
+2026-09-26 15:52:43,418 INFO     END source=jnu_notices_fixture run_id=ab3efb68 status=success duration_ms=22
+2026-09-26 15:52:43,418 INFO     SCHEDULED_RUN source=jnu_notices_fixture status=success new=0 changed=0 existing=14
+2026-09-26 15:52:46,389 INFO     START source=jnu_notices_fixture run_id=1126a267 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html capabilities=listing,pagination
+2026-09-26 15:52:46,390 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html status=200 duration_ms=0
+2026-09-26 15:52:46,398 INFO     PARSE source=jnu_notices_fixture page=1 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_1.html records=5
+2026-09-26 15:52:46,402 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html status=200 duration_ms=0
+2026-09-26 15:52:46,406 INFO     PARSE source=jnu_notices_fixture page=2 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_2.html records=5
+2026-09-26 15:52:46,406 INFO     DUPLICATE source=jnu_notices_fixture item_url=https://www.jnu.ac.in/sites/default/files/inline-files/library.pdf page=2 (skipped)
+2026-09-26 15:52:46,409 INFO     FETCH url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html status=200 duration_ms=0
+2026-09-26 15:52:46,411 INFO     PARSE source=jnu_notices_fixture page=3 url=file:///Users/mayank/Documents/SSRISS/week_2/fixtures/pagination/page_3.html records=5
+2026-09-26 15:52:46,414 INFO     PAGINATION source=jnu_notices_fixture pages=3 records=14 duplicates=1 stop=no_next
+2026-09-26 15:52:46,414 INFO     NORMALIZE source=jnu_notices_fixture records=14 skipped=0
+2026-09-26 15:52:46,417 INFO     STORE source=jnu_notices_fixture new=0 existing=14 changed=0
+2026-09-26 15:52:46,418 INFO     END source=jnu_notices_fixture run_id=1126a267 status=success duration_ms=27
+2026-09-26 15:52:46,418 INFO     SCHEDULED_RUN source=jnu_notices_fixture status=success new=0 changed=0 existing=14
+2026-09-26 15:52:47,394 INFO     SCHEDULER stopped
