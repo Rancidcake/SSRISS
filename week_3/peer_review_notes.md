@@ -1,87 +1,139 @@
-# Week 3 Peer-Review: Saanvi's IIMA Central Aggregator
+# Week 3 Peer Review: Saanvi's IIMA Central Aggregator
 
-**Reviewer:** Mayank (SSRISS Intern — JNU Monitor)  
-**Author Under Review:** Saanvi (SSRISS Intern — IISER Pune / IIMA Aggregator)  
-**Target Under Review:** Indian Institute of Management Ahmedabad (`https://www.iima.ac.in/the-institute/events`)  
-**Repository Location Reviewed:** `SSRISS_ASSIGNMENTS/Week_3`  
-**Date:** October 2026  
+**Reviewer:** Mayank (SSRISS Intern – JNU Monitor)  
+**Author:** Saanvi (SSRISS Intern – IISER Pune / IIMA Aggregator)  
+**Target:** Indian Institute of Management Ahmedabad (IIMA)  
+**Target URL:** https://www.iima.ac.in/the-institute/events  
+**Repository:** `SSRISS_ASSIGNMENTS/Week_3`  
+**Date:** October 2026
 
----
+## 1. Overview
 
-## 1. Executive Summary & Review Scope
+For the Week 3 peer review , I reviewed Saanvi's central aggregator implementation for IIM Ahmedabad.
 
-As part of the Week 3 paired review (**Saanvi ↔ Mayank**), I conducted an in-depth architectural and code review of Saanvi's central aggregator implementation for the Indian Institute of Management Ahmedabad (IIMA). 
+Saanvi initially worked on IISER Pune but switched to IIMA after finding that many IISER Pune event announcements were published as image posters or PDFs, making them difficult to collect consistently. IIMA's central events page was a more suitable choice because it provides a single place to find information about seminars, conferences, research talks and other academic events.
 
-Saanvi transitioned from her primary assigned institution (IISER Pune) to IIMA after discovering that IISER Pune's public event updates were heavily locked inside binary image posters and unstructured PDFs without a stable central listing. IIMA proved to be a model high-yield aggregator candidate, exposing structured semantic HTML cards for executive seminars, academic conferences, and research talks across multiple management centers.
+The review covers all 10 questions from Section 11 of the Week 3 syllabus, followed by three technical comments on the implementation.
 
-The audit evaluates the implementation across all ten review questions specified in Section 11 of the Week 3 syllabus, concluding with three substantive technical recommendations.
-
----
-
-## 2. Technical Evaluation against the 10 Syllabus Review Questions
+## 2. Review Against the 10 Syllabus Questions
 
 ### Question 1: Is the target genuinely high-yield?
-**Assessment: YES (Outstanding Selection)**  
-- *Analysis:* Saanvi's choice of `https://www.iima.ac.in/the-institute/events` is a quintessential high-yield surface. Rather than crawling isolated faculty directories or departmental subdomains, this single endpoint aggregates public lectures, management symposiums, and research workshops from across IIMA's centers (e.g., Centre for Management in Agriculture, Centre for Innovation Incubation and Entrepreneurship, Ashank Desai Centre for IT and Networked Economy). A single crawl provides institution-wide visibility.
 
-### Question 2: Is scope clearly bounded?
-**Assessment: YES (Strictly Enforced)**  
-- *Analysis:* In [`02_scope/scope_filter.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/02_scope/scope_filter.py), `UrlScopeFilter` bounds the crawl frontier to `allowed_hostname="www.iima.ac.in"` and allowed path prefixes `["/the-institute/events", "/news"]`. It explicitly excludes `/calendar`, `/search`, `/filter`, `/login`, and binary asset directories (`/sites/default/files`). Off-domain links are rejected (`allow_external=False`).
+**Assessment: Yes**
 
-### Question 3: Could pagination loop indefinitely?
-**Assessment: NO (Safe Bounded Traversal)**  
-- *Analysis:* The adapter enforces both a hard pagination ceiling (`max_pages=3`) and a discovery item ceiling (`max_items=30`). Furthermore, the scope filter denies calendar parameter traps (e.g., query strings containing `month=`, `year=`, or `filter=`), preventing infinite calendar loops.
+The IIMA events page is a good choice for a central aggregator. It brings together events from different parts of the institute, including public lectures, research seminars, workshops and management conferences. This means the crawler can discover events from multiple centres without having to start from separate departmental pages.
 
-### Question 4: Are feeds/sitemaps treated as discovery rather than complete truth?
-**Assessment: YES (Strict Layer Separation)**  
-- *Analysis:* In [`01_discovery/unified_discovery.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/01_discovery/unified_discovery.py), RSS feeds and XML sitemaps emit `DiscoveryRecord` tuples containing only candidate URLs and timestamps. They are treated strictly as pointers to frontier candidates. Full semantic records are extracted only in downstream detail parsing.
+### Question 2: Is the scope clearly bounded?
+
+**Assessment: Yes**
+
+In `02_scope/scope_filter.py`, the `UrlScopeFilter` restricts crawling to `www.iima.ac.in` and the allowed paths `/the-institute/events` and `/news`.
+
+It also excludes paths such as `/calendar`, `/search`, `/filter`, `/login` and `/sites/default/files`. External links are rejected because `allow_external=False`.
+
+This keeps the crawler focused on relevant institute pages instead of allowing it to follow unrelated links.
+
+### Question 3: Could pagination continue indefinitely?
+
+**Assessment: No, based on the configured limits**
+
+The adapter sets `max_pages=3` and `max_items=30`, which limits the number of pages and discovered items it can process. The scope filter also blocks certain calendar-related query parameters, including `month=`, `year=` and `filter=`.
+
+These restrictions reduce the risk of the crawler getting stuck in repetitive pagination or calendar URLs.
+
+### Question 4: Are feeds and sitemaps used for discovery rather than treated as complete data sources?
+
+**Assessment: Yes**
+
+In `01_discovery/unified_discovery.py`, RSS feeds and XML sitemaps produce `DiscoveryRecord` entries containing candidate URLs and timestamps.
+
+These records are used to identify pages for further processing. The actual event details are extracted later by the relevant parsing components. This keeps discovery separate from extraction.
 
 ### Question 5: Are item URLs canonicalized consistently?
-**Assessment: YES (Robust Normalization)**  
-- *Analysis:* URL canonicalization lowercases the scheme and netloc, strips fragment anchors (`#...`), and eliminates marketing tracking parameters (`utm_source`, `utm_medium`, `fbclid`, `gclid`, `ref`). This guarantees that duplicate links with differing query tracking parameters map to the identical canonical database key.
 
-### Question 6: Is a missing field handled without crashing?
-**Assessment: YES (Graceful Degradation)**  
-- *Analysis:* In [`05_extraction/entity_extractor.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/05_extraction/entity_extractor.py), when optional fields (e.g., raw affiliation, chair name) are omitted on an event card, the fields gracefully resolve to `None` / `null` rather than throwing `AttributeError` or `KeyError`.
+**Assessment: Yes**
 
-### Question 7: Are speakers/organizations supported by source text?
-**Assessment: YES (Auditable Provenance)**  
-- *Analysis:* Every extracted person and organization entity retains its verbatim `source_text` provenance attribute pointing directly to the exact HTML text line that justified the entity's extraction. No affiliations or ideologies are inferred.
+The URL normalization logic lowercases the scheme and hostname, removes fragments and strips common tracking parameters such as `utm_source`, `utm_medium`, `fbclid`, `gclid` and `ref`.
 
-### Question 8: Are uncertain identities merged too aggressively?
-**Assessment: YES (Conservative Resolution Invariant)**  
-- *Analysis:* In [`07_resolution/entity_matcher.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/07_resolution/entity_matcher.py), Saanvi strictly enforces **False Split over False Merge**. Ambiguous initial-only matches (e.g., "A. Rao" vs "Prof. Ananya Rao") are flagged as `possible match requiring review` and never merged automatically.
+This helps prevent the same page from being stored multiple times just because it was reached through links with different tracking parameters.
 
-### Question 9: Can you tell from logs whether zero new items means "nothing new" or "parser broken"?
-**Assessment: YES (Distinct Diagnostic Signals)**  
-- *Analysis:* In [`09_metrics/run_summary.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/09_metrics/run_summary.py), the `diagnose_health()` method clearly distinguishes:
-  - `HEALTHY: Source active (steady state, all unchanged)` when `pages_fetched > 0` and `unchanged > 0`.
-  - `CRITICAL: Broken parser suspected` when `pages_fetched > 0` but `items_parsed == 0`.
+### Question 6: Does the extractor handle missing fields without crashing?
 
-### Question 10: Could this adapter run repeatedly without duplicating records?
-**Assessment: YES (Deterministic Idempotency)**  
-- *Analysis:* In [`04_incremental/incremental_store.py`](file:///home/kresler/Downloads/SSRISS_ASSIGNMENTS-main/Week_3/assignments/04_incremental/incremental_store.py), stable SHA-256 content hashes computed over sorted, non-volatile semantic fields allow repeated runs to correctly flag existing items as `UNCHANGED` without inserting duplicate rows.
+**Assessment: Yes**
 
----
+In `05_extraction/entity_extractor.py`, optional fields such as affiliation or chair name can be missing without causing an exception. These fields resolve to `None` or `null` where appropriate.
 
-## 3. Substantive Technical Review Comments & Recommendations
+This is useful because event pages do not always follow the same format or provide every detail.
 
-### Comment 1: Acronym Extraction Boundary in Organization Normalization
-- **Observation:** In `entity_matcher.py`, `_normalize_org` extracts parenthetical acronyms using the regex `r"\(([^)]+)\)$"`. If an organization string contains an explanatory parenthetical note rather than an acronym (e.g., `"Centre for Innovation (Main Campus)"`), the code checks `if len(inner) <= 6 and inner.isalpha():`.
-- **Potential Edge Case:** While `len <= 6` prevents long descriptions from matching, a city abbreviation or 4-letter word in parentheses (e.g., `"Department of Economics (Pune)"` or `"(East)"`) could be misclassified as an acronym `pune` or `east`.
-- **Recommendation:** Add an additional heuristic verifying that the extracted acronym string actually matches the computed initialism of the preceding organization title, or check against a known whitelist of institutional acronyms.
+### Question 7: Are extracted speakers and organizations supported by source text?
 
-### Comment 2: Handling Subdomain Variations for Institutional Landing Pages
-- **Observation:** In `scope_filter.py`, the `allowed_hostname` is hard-coded to `"www.iima.ac.in"`.
-- **Potential Issue:** Like JNU (`jnu.ac.in` vs `www.jnu.ac.in`), IIMA frequently hosts specialized research centers or conferences on subdomains (e.g., `ciie.iima.ac.in` or `execed.iima.ac.in`). If central events link directly to these center subdomains, the current strict hostname check will reject them.
-- **Recommendation:** Introduce an `allowed_subdomains: bool` flag or allow wildcard regexes (e.g., `r"^([a-z0-9-]+\.)?iima\.ac\.in$"`) to permit legitimate on-campus research center subdomains while continuing to block off-domain links.
+**Assessment: Yes**
 
-### Comment 3: Incremental State Table Integration
-- **Observation:** In Assignment 10 (`CentralAggregatorAdapter`), incremental hashes are tracked in a dedicated table `item_hashes` initialized inside the relational store connection.
-- **Commendation:** This clean architectural separation keeps relational entity data (`items`, `people`, `organizations`) pristine while maintaining cryptographic change-detection state in a lightweight companion table. The two-phase run demonstration (`run_integration.py`) cleanly proves zero database churn during steady-state monitoring.
+The implementation stores a `source_text` attribute for extracted person and organization entities. This allows a reviewer to trace an extracted entity back to the text used to identify it.
 
----
+The approach also avoids adding unsupported details about a person's affiliation or background.
 
-## 4. Overall Peer Review Conclusion
+### Question 8: Does entity resolution avoid merging uncertain identities?
 
-Saanvi's Week 3 submission is an exceptional piece of data engineering. The codebase is thoroughly tested (160+ unit tests), strictly obeys the conservative entity resolution guidelines, and provides crystal-clear observability for operational monitoring. All required deliverables and architectural invariants have been comprehensively met.
+**Assessment: Yes**
+
+In `07_resolution/entity_matcher.py`, the matching logic follows a conservative approach that favours a possible false split over an incorrect merge.
+
+For example, a name such as "A. Rao" is not automatically merged with "Prof. Ananya Rao" when the available information is insufficient. Such cases are flagged for manual review.
+
+This is appropriate for an academic event aggregator, where different people may have similar names.
+
+### Question 9: Can the logs distinguish between no new events and a broken parser?
+
+**Assessment: Yes**
+
+In `09_metrics/run_summary.py`, the `diagnose_health()` method uses the run statistics to identify different outcomes.
+
+- `HEALTHY: Source active (steady state, all unchanged)` is reported when pages have been fetched and existing items are unchanged.
+- `CRITICAL: Broken parser suspected` is reported when pages have been fetched but no items were parsed.
+
+This distinction helps when checking whether the source has simply not changed or whether the extraction process needs attention.
+
+### Question 10: Can the adapter run repeatedly without creating duplicate records?
+
+**Assessment: Yes**
+
+In `04_incremental/incremental_store.py`, the implementation uses SHA-256 hashes calculated from sorted, non-volatile semantic fields.
+
+When an item has not changed, its hash remains the same and the record can be marked `UNCHANGED` rather than inserted again. The two-run demonstration in `run_integration.py` also shows how the adapter handles repeated runs.
+
+## 3. Technical Comments and Recommendations
+
+### Comment 1: Improving acronym detection in organization names
+
+In `entity_matcher.py`, the `_normalize_org` method uses the regular expression `r"\(([^)]+)\)$"` to identify text inside parentheses at the end of an organization name.
+
+The current check, `len(inner) <= 6 and inner.isalpha()`, helps identify short acronyms. However, it could also classify words such as "Pune" or "East" as acronyms in names like "Department of Economics (Pune)" or "Centre for Research (East)".
+
+I suggest checking whether the text in parentheses matches the initials of the organization name. Another option is to compare it against a list of known institutional acronyms. Either approach would reduce incorrect organization matches.
+
+### Comment 2: Handling institutional subdomains
+
+In `scope_filter.py`, the allowed hostname is set to `www.iima.ac.in`.
+
+This is restrictive if an event on the main IIMA website links to a legitimate research centre or conference hosted on a subdomain, such as `ciie.iima.ac.in` or `execed.iima.ac.in`. These URLs would be rejected under the current hostname rule.
+
+I suggest adding an option to allow approved subdomains. For example, a hostname rule could accept `iima.ac.in` and its subdomains while continuing to reject unrelated domains.
+
+The implementation should still apply the path and URL restrictions to prevent the crawler from expanding beyond the intended scope.
+
+### Comment 3: Incremental state storage
+
+In Assignment 10, `CentralAggregatorAdapter` tracks content hashes in a separate `item_hashes` table within the relational store.
+
+I think keeping the hash state separate from the main `items`, `people` and `organizations` tables is a sensible design choice. It keeps change-detection data separate from the extracted records.
+
+The two-run demonstration in `run_integration.py` is also useful for checking whether the adapter correctly identifies unchanged items on subsequent runs.
+
+## 4. Overall Conclusion
+
+Overall, Saanvi's submission addresses all 10 Week 3 review questions. The implementation has clear crawl limits, separates discovery from extraction, handles missing fields and uses conservative entity matching. Its incremental hashing and run diagnostics are also useful for repeated monitoring.
+
+My main suggestions are to improve acronym detection, make the hostname rules configurable for approved IIMA subdomains and continue testing the incremental state handling across repeated runs.
+
+The submission reports more than 160 unit tests. These provide a useful basis for checking the implementation, alongside the integration test and the three improvements noted above.
