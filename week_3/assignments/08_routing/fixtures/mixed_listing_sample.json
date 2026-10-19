@@ -1,0 +1,44 @@
+[
+  {
+    "discovered_url": "https://www.jnu.ac.in/node/159898390",
+    "discovered_title": "SCIS organises a lecture by Dr. Divya P. Kumar",
+    "section": "events",
+    "expected_type": "event",
+    "rationale": "Explicit event section and /node/<id> path with lecture title"
+  },
+  {
+    "discovered_url": "https://www.jnu.ac.in/notices/annual-tender-2026",
+    "discovered_title": "Tender Notice for Supply of Scientific Equipment",
+    "section": "notices",
+    "expected_type": "announcement",
+    "rationale": "Path under /notices/ and section labeled notices"
+  },
+  {
+    "discovered_url": "https://www.jnu.ac.in/faculty/scis/divya-kumar",
+    "discovered_title": "Faculty Profile: Dr. Divya P. Kumar",
+    "section": "faculty",
+    "expected_type": "faculty",
+    "rationale": "URL path contains /faculty/ and section is faculty"
+  },
+  {
+    "discovered_url": "https://www.jnu.ac.in/sites/default/files/circular_oct_2026.pdf",
+    "discovered_title": "Academic Council Resolution (PDF)",
+    "section": "downloads",
+    "expected_type": "pdf_document",
+    "rationale": "Ends in .pdf and matches file download path"
+  },
+  {
+    "discovered_url": "https://docs.google.com/forms/d/1XKf3OSvnc02rfU7tu8Zl1Mv3vuPtOg2s7G3gvWmjY3Y",
+    "discovered_title": "Event Registration Form",
+    "section": "external",
+    "expected_type": "external_link",
+    "rationale": "Off-domain host docs.google.com"
+  },
+  {
+    "discovered_url": "https://www.jnu.ac.in/misc/portal/service-tracker?id=99",
+    "discovered_title": "Campus Service Tracker",
+    "section": "internal_tools",
+    "expected_type": "unknown",
+    "rationale": "Unrecognized section and path structure; preserved as unknown"
+  }
+]

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>JNU Feed Fixture</title>
+    <link>https://www.jnu.ac.in/jnuevents</link>
+    <item>
+      <title>SCIS organises a lecture by Dr. Divya P. Kumar</title>
+      <link>https://www.jnu.ac.in/node/159898390</link>
+      <pubDate>Tue, 29 Sep 2026 12:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>SCIS organises a lecture by Prof. D. S. Hooda</title>
+      <link>https://www.jnu.ac.in/node/159898442</link>
+      <pubDate>Wed, 30 Sep 2026 12:00:00 +0530</pubDate>
+    </item>
+  </channel>
+</rss>

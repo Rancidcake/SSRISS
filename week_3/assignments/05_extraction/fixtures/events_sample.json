@@ -1,0 +1,150 @@
+[
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898390",
+    "title": "SCIS organises a lecture by Dr. Divya P. Kumar",
+    "raw_text": "Speaker: Dr. Divya P. Kumar, Centre for Computational Biology\nOrganized by: School of Computational and Integrative Sciences\nChair: Prof. Indira Ghosh\nVenue: Committee Room, SCIS",
+    "expected_people": [
+      {"name": "Dr. Divya P. Kumar", "role": "speaker", "affiliation_raw": "Centre for Computational Biology"},
+      {"name": "Prof. Indira Ghosh", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Computational and Integrative Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898442",
+    "title": "SCIS organises a lecture by Prof. D. S. Hooda",
+    "raw_text": "Speaker: Prof. D. S. Hooda, Former Head, Department of Mathematics, MD University\nOrganized by: School of Computational and Integrative Sciences\nChair: Prof. Pradipta Bandyopadhyay\nVenue: Virtual Mode",
+    "expected_people": [
+      {"name": "Prof. D. S. Hooda", "role": "speaker", "affiliation_raw": "Former Head, Department of Mathematics, MD University"},
+      {"name": "Prof. Pradipta Bandyopadhyay", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Computational and Integrative Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898416",
+    "title": "SSIS is celebrating its Silver Jubilee under the theme 'Sanskrit and Indic Studies'",
+    "raw_text": "Organized by: School of Sanskrit and Indic Studies\nChief Guest: Dr. Vinay Sahasrabuddhe\nChair: Prof. Santishree Dhulipudi Pandit\nWelcome Address: Prof. Girish Nath Jha",
+    "expected_people": [
+      {"name": "Dr. Vinay Sahasrabuddhe", "role": "chief_guest", "affiliation_raw": null},
+      {"name": "Prof. Santishree Dhulipudi Pandit", "role": "chair", "affiliation_raw": null},
+      {"name": "Prof. Girish Nath Jha", "role": "welcome_address", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Sanskrit and Indic Studies", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159897904",
+    "title": "SCSS organises 4th International Conference on Networks and Cryptology (NetCrypt 2026)",
+    "raw_text": "Organized by: School of Computer and Systems Sciences\nCo-organized by: Cryptology Research Society of India\nGeneral Chair: Prof. R. K. Agrawal\nKeynote Speaker: Prof. Bart Preneel, KU Leuven\nSession Chair: Dr. T. V. Vijay Kumar",
+    "expected_people": [
+      {"name": "Prof. R. K. Agrawal", "role": "chair", "affiliation_raw": null},
+      {"name": "Prof. Bart Preneel", "role": "speaker", "affiliation_raw": "KU Leuven"},
+      {"name": "Dr. T. V. Vijay Kumar", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Computer and Systems Sciences", "role": "organizer"},
+      {"name": "Cryptology Research Society of India", "role": "co_organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898450",
+    "title": "CIPOD, SIS organises lecture by Amb. Ruchira Kamboj",
+    "raw_text": "Distinguished Speaker: Amb. Ruchira Kamboj, Former Permanent Representative of India to the UN\nOrganized by: Centre for International Politics, Organization and Disarmament\nModerator: Prof. Swaran Singh",
+    "expected_people": [
+      {"name": "Amb. Ruchira Kamboj", "role": "speaker", "affiliation_raw": "Former Permanent Representative of India to the UN"},
+      {"name": "Prof. Swaran Singh", "role": "moderator", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "Centre for International Politics, Organization and Disarmament", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898439",
+    "title": "SCIS organises a lecture by Amrutha Swaminathan",
+    "raw_text": "Speaker: Amrutha Swaminathan\nOrganized by: School of Computational and Integrative Sciences\nVenue: Auditorium",
+    "expected_people": [
+      {"name": "Amrutha Swaminathan", "role": "speaker", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Computational and Integrative Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898460",
+    "title": "CHS Special Seminar on Agrarian History of Medieval Deccan",
+    "raw_text": "Speaker: Prof. Richard M. Eaton, University of Arizona\nOrganized by: Centre for Historical Studies\nChair: Prof. Najaf Haider",
+    "expected_people": [
+      {"name": "Prof. Richard M. Eaton", "role": "speaker", "affiliation_raw": "University of Arizona"},
+      {"name": "Prof. Najaf Haider", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "Centre for Historical Studies", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898465",
+    "title": "SPS Colloquium on Quantum Many-Body Physics",
+    "raw_text": "Speaker: Dr. Subroto Mukerjee, Indian Institute of Science Bangalore\nOrganized by: School of Physical Sciences\nChair: Prof. Sanjay Puri",
+    "expected_people": [
+      {"name": "Dr. Subroto Mukerjee", "role": "speaker", "affiliation_raw": "Indian Institute of Science Bangalore"},
+      {"name": "Prof. Sanjay Puri", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Physical Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898470",
+    "title": "CSLG Panel Discussion on Regulatory Governance in South Asia",
+    "raw_text": "Panelists: Prof. Niraja Gopal Jayal, King's College London; Dr. Pratap Bhanu Mehta\nOrganized by: Centre for the Study of Law and Governance\nModerator: Prof. Amita Singh",
+    "expected_people": [
+      {"name": "Prof. Niraja Gopal Jayal", "role": "panelist", "affiliation_raw": "King's College London"},
+      {"name": "Dr. Pratap Bhanu Mehta", "role": "panelist", "affiliation_raw": null},
+      {"name": "Prof. Amita Singh", "role": "moderator", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "Centre for the Study of Law and Governance", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898475",
+    "title": "SES Memorial Lecture on Himalayan Cryosphere Dynamics",
+    "raw_text": "Speaker: Prof. Anil K. Kulkarni, Divecha Centre for Climate Change\nOrganized by: School of Environmental Sciences\nChair: Prof. A. P. Dimri\nVote of Thanks: Dr. Paulraj R.",
+    "expected_people": [
+      {"name": "Prof. Anil K. Kulkarni", "role": "speaker", "affiliation_raw": "Divecha Centre for Climate Change"},
+      {"name": "Prof. A. P. Dimri", "role": "chair", "affiliation_raw": null},
+      {"name": "Dr. Paulraj R.", "role": "vote_of_thanks", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Environmental Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898480",
+    "title": "SLS Workshop on Advances in CRISPR Technology",
+    "raw_text": "Instructor: Dr. Debojyoti Chakraborty, CSIR-IGIB\nOrganized by: School of Life Sciences\nCoordinator: Prof. Rana Pratap Singh",
+    "expected_people": [
+      {"name": "Dr. Debojyoti Chakraborty", "role": "instructor", "affiliation_raw": "CSIR-IGIB"},
+      {"name": "Prof. Rana Pratap Singh", "role": "coordinator", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "School of Life Sciences", "role": "organizer"}
+    ]
+  },
+  {
+    "item_url": "https://www.jnu.ac.in/node/159898485",
+    "title": "CCSE Seminar on Contemporary Chinese Foreign Policy",
+    "raw_text": "Speaker: Prof. Srikanth Kondapalli\nOrganized by: Centre for East Asian Studies\nChair: Prof. Alka Acharya",
+    "expected_people": [
+      {"name": "Prof. Srikanth Kondapalli", "role": "speaker", "affiliation_raw": null},
+      {"name": "Prof. Alka Acharya", "role": "chair", "affiliation_raw": null}
+    ],
+    "expected_orgs": [
+      {"name": "Centre for East Asian Studies", "role": "organizer"}
+    ]
+  }
+]

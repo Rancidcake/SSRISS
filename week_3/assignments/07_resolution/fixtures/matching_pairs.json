@@ -1,0 +1,72 @@
+[
+  {
+    "entity_type": "person",
+    "entity_a": "Prof. Ananya Rao",
+    "entity_b": "Ananya Rao",
+    "expected_decision": "safe automatic match",
+    "rationale": "Identical name tokens once standard academic honorific 'Prof.' and punctuation are stripped."
+  },
+  {
+    "entity_type": "person",
+    "entity_a": "Prof Ananya Rao",
+    "entity_b": "Ananya Rao",
+    "expected_decision": "safe automatic match",
+    "rationale": "Identical name tokens; only punctuation-free honorific prefix distinguishes them."
+  },
+  {
+    "entity_type": "person",
+    "entity_a": "A. Rao",
+    "entity_b": "Ananya Rao",
+    "expected_decision": "possible match requiring review",
+    "rationale": "Single initial match with shared surname is ambiguous; high risk of merging different scholars (e.g., Arvind Rao vs Ananya Rao)."
+  },
+  {
+    "entity_type": "person",
+    "entity_a": "Ananya R.",
+    "entity_b": "Ananya Rao",
+    "expected_decision": "possible match requiring review",
+    "rationale": "First name matches but surname is abbreviated to initial; requires human/context review to avoid false merge."
+  },
+  {
+    "entity_type": "person",
+    "entity_a": "Dr. Arvind Sharma",
+    "entity_b": "Dr. Anand Sharma",
+    "expected_decision": "do not match automatically",
+    "rationale": "Distinct first names sharing title and surname; completely separate individuals."
+  },
+  {
+    "entity_type": "person",
+    "entity_a": "Prof. D. S. Hooda",
+    "entity_b": "D.S. Hooda",
+    "expected_decision": "safe automatic match",
+    "rationale": "Identical initial sequence and surname once whitespace, dots, and honorifics are normalized."
+  },
+  {
+    "entity_type": "organization",
+    "entity_a": "Centre for Policy Research",
+    "entity_b": "Center for Policy Research",
+    "expected_decision": "safe automatic match",
+    "rationale": "Standard British vs American spelling variant ('centre' vs 'center') of identical institution."
+  },
+  {
+    "entity_type": "organization",
+    "entity_a": "Centre for Policy Research",
+    "entity_b": "Centre for Policy Research (CPR)",
+    "expected_decision": "safe automatic match",
+    "rationale": "Full institutional title with parenthetical acronym; acronym exactly matches initialism of the title."
+  },
+  {
+    "entity_type": "organization",
+    "entity_a": "CPR",
+    "entity_b": "Centre for Policy Research",
+    "expected_decision": "possible match requiring review",
+    "rationale": "Standalone 3-letter acronym is polysemic (could be Cardiopulmonary Resuscitation, CPR India, etc.); requires contextual confirmation."
+  },
+  {
+    "entity_type": "organization",
+    "entity_a": "School of Computer and Systems Sciences",
+    "entity_b": "School of Computational and Integrative Sciences",
+    "expected_decision": "do not match automatically",
+    "rationale": "Two completely distinct academic schools within JNU (SCSS vs SCIS), despite phonetic similarity."
+  }
+]

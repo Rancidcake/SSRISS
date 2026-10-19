@@ -1,0 +1,230 @@
+2026-10-19 21:36:32,044 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:36:32,099 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:36:32,102 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:36:32,104 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:36:32,105 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:36:32,106 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:36:32,108 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:36:32,109 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:36:32,110 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 6
+CHANGED: 0
+UNCHANGED: 0
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Active updates ingested
+2026-10-19 21:36:32,111 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:36:32,134 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:36:32,136 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:36:32,137 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:36:32,139 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:36:32,140 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:36:32,142 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:36:32,143 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:36:32,143 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 0
+CHANGED: 0
+UNCHANGED: 6
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Source active (steady state, all unchanged)
+2026-10-19 21:37:03,196 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:37:03,259 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:37:03,262 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:37:03,263 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:37:03,264 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:37:03,265 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:37:03,267 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:37:03,268 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:37:03,270 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 6
+CHANGED: 0
+UNCHANGED: 0
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Active updates ingested
+2026-10-19 21:37:03,271 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:37:03,292 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:37:03,294 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:37:03,296 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:37:03,298 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:37:03,300 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:37:03,301 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:37:03,303 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:37:03,304 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 0
+CHANGED: 0
+UNCHANGED: 6
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Source active (steady state, all unchanged)
+2026-10-19 21:37:39,457 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:37:39,474 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:37:39,476 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:37:39,477 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:37:39,478 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:37:39,480 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:37:39,482 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:37:39,483 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:37:39,484 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 6
+CHANGED: 0
+UNCHANGED: 0
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Active updates ingested
+2026-10-19 21:37:39,485 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:37:39,506 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:37:39,508 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:37:39,511 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:37:39,512 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:37:39,514 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:37:39,516 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:37:39,518 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:37:39,519 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 0
+CHANGED: 0
+UNCHANGED: 6
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Source active (steady state, all unchanged)
+2026-10-19 21:38:54,799 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:38:54,867 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:38:54,870 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:38:54,872 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:38:54,873 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:38:54,874 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:38:54,875 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:38:54,877 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:38:54,879 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 6
+CHANGED: 0
+UNCHANGED: 0
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Active updates ingested
+2026-10-19 21:38:54,880 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:38:54,911 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:38:54,914 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:38:54,916 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:38:54,918 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:38:54,920 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:38:54,922 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:38:54,923 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:38:54,925 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 0
+CHANGED: 0
+UNCHANGED: 6
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Source active (steady state, all unchanged)
+2026-10-19 21:44:59,265 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:44:59,285 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:44:59,288 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:44:59,289 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:44:59,290 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:44:59,291 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:44:59,292 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:44:59,293 [INFO] Aggregator.jnu_events: [NEW] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:44:59,294 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 6
+CHANGED: 0
+UNCHANGED: 0
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Active updates ingested
+2026-10-19 21:44:59,295 [INFO] Aggregator.jnu_events: === Starting Ingestion Run: jnu_events ===
+2026-10-19 21:44:59,312 [INFO] Aggregator.jnu_events: Discovery complete: found 6 candidate items.
+2026-10-19 21:44:59,314 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898390 -> 1 people, 1 orgs
+2026-10-19 21:44:59,315 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898442 -> 1 people, 1 orgs
+2026-10-19 21:44:59,317 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898416 -> 0 people, 1 orgs
+2026-10-19 21:44:59,317 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159897904 -> 0 people, 1 orgs
+2026-10-19 21:44:59,318 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898450 -> 1 people, 1 orgs
+2026-10-19 21:44:59,320 [INFO] Aggregator.jnu_events: [UNCHANGED] https://www.jnu.ac.in/node/159898460 -> 1 people, 1 orgs
+2026-10-19 21:44:59,320 [INFO] Aggregator.jnu_events: 
+SOURCE: jnu_events
+PAGES_FETCHED: 1
+ITEMS_DISCOVERED: 6
+ITEMS_PARSED: 6
+NEW: 0
+CHANGED: 0
+UNCHANGED: 6
+FAILED: 0
+PEOPLE_EXTRACTED: 4
+ORGANIZATIONS_EXTRACTED: 6
+COVERAGE_DATE: 100.0%
+COVERAGE_SPEAKER: 66.7%
+COVERAGE_ORGANIZATION: 100.0%
+STATUS: HEALTHY: Source active (steady state, all unchanged)

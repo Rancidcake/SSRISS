@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jawaharlal Nehru University - Events and Seminars Feed</title>
+    <link>https://www.jnu.ac.in/jnuevents</link>
+    <description>Central aggregation feed of seminars, academic lectures, and conferences at JNU New Delhi</description>
+    <language>en-us</language>
+    <pubDate>Mon, 28 Sep 2026 09:30:00 +0530</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2026 09:30:00 +0530</lastBuildDate>
+    <atom:link href="https://www.jnu.ac.in/rss/events.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>SCIS organises a lecture by Dr. Divya P. Kumar</title>
+      <link>https://www.jnu.ac.in/node/159898390</link>
+      <description>School of Computational and Integrative Sciences hosts special seminar on computational genomics.</description>
+      <pubDate>Tue, 29 Sep 2026 12:00:00 +0530</pubDate>
+      <guid isPermaLink="true">https://www.jnu.ac.in/node/159898390</guid>
+    </item>
+
+    <item>
+      <title>SCIS organises a lecture by Prof. D. S. Hooda</title>
+      <link>https://www.jnu.ac.in/node/159898442</link>
+      <description>Prof. D. S. Hooda delivers keynote on information theoretic entropy and cyber analytics.</description>
+      <pubDate>Wed, 30 Sep 2026 12:00:00 +0530</pubDate>
+      <guid isPermaLink="true">https://www.jnu.ac.in/node/159898442</guid>
+    </item>
+
+    <item>
+      <title>SSIS is celebrating its Silver Jubilee under the theme "Sanskrit and Indic Studies"</title>
+      <link>https://www.jnu.ac.in/node/159898416</link>
+      <description>School of Sanskrit and Indic Studies multi-day academic colloquium and research exhibition.</description>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 +0530</pubDate>
+      <guid isPermaLink="true">https://www.jnu.ac.in/node/159898416</guid>
+    </item>
+
+    <item>
+      <title>SCSS organises 4th International Conference on Networks and Cryptology (NetCrypt 2026)</title>
+      <link>https://www.jnu.ac.in/node/159897904</link>
+      <description>Three-day international symposium featuring world-renowned scientists in network security.</description>
+      <pubDate>Thu, 08 Oct 2026 09:00:00 +0530</pubDate>
+      <guid isPermaLink="true">https://www.jnu.ac.in/node/159897904</guid>
+    </item>
+
+    <item>
+      <title>CIPOD, SIS organises lecture by Amb. Ruchira Kamboj</title>
+      <link>https://www.jnu.ac.in/node/159898450</link>
+      <description>Distinguished lecture on multilateral diplomacy and multilateral institutional reform.</description>
+      <pubDate>Mon, 12 Oct 2026 14:30:00 +0530</pubDate>
+      <guid isPermaLink="true">https://www.jnu.ac.in/node/159898450</guid>
+    </item>
+  </channel>
+</rss>
