@@ -7,7 +7,7 @@
 
 ---
 
-## 1. Executive Summary & Pipeline Topology
+## 1. Brief Summary & Pipeline Topology
 
 Week 3 shifts the monitoring architecture from individual departmental scrapers to a **high-yield central aggregator** that discovers, filters, classifies, relationally models, and observes campus updates across multiple university schools and autonomous research units.
 
@@ -52,30 +52,9 @@ HEALTH / COVERAGE SUMMARY
 
 ---
 
-## 2. Deliverables Matrix (All 16 Requirements)
 
-| # | Deliverable | Location | Description |
-|---|---|---|---|
-| **1** | **Aggregator Candidate Matrix** | [`assignments/00_candidates/jnu_aggregators.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/00_candidates/jnu_aggregators.md) | Evaluates 3 institutional surfaces (JNU Events, JNU Notices, Departmental Faculty Page) across yield, structure, updates, and accessibility. |
-| **2** | **Chosen Source Rationale** | [`assignments/00_candidates/jnu_aggregators.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/00_candidates/jnu_aggregators.md) | Criteria-based justification for selecting JNU Central Events (`/jnuevents`) as primary target. |
-| **3** | **Feed/Sitemap/Listing Discovery** | [`assignments/01_discovery/findings.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/01_discovery/findings.md)<br>[`assignments/01_discovery/unified_discovery.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/01_discovery/unified_discovery.py) | Inspection scripts (`inspect_feed.py`, `inspect_sitemap.py`) and unified multi-format discovery engine with local fixtures. |
-| **4** | **URL Scope Rules** | [`assignments/02_scope/scope_cases.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/02_scope/scope_cases.md)<br>[`assignments/02_scope/scope_filter.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/02_scope/scope_filter.py) | Host boundary validation, path allow/denylists, tracking-parameter stripping, binary filters, and trap guards. |
-| **5** | **Discovery Adapter** | [`assignments/03_interface/aggregator_discovery.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/03_interface/aggregator_discovery.py) | `BaseDiscoveryAdapter` and concrete adapters emitting canonical discovery records. |
-| **6** | **Incremental Collection & Change Detection** | [`assignments/04_incremental/run_state_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/04_incremental/run_state_notes.md)<br>[`assignments/04_incremental/incremental_store.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/04_incremental/incremental_store.py) | Cryptographic SHA-256 content hashing, lifecycle timestamps (`first_seen_at`, `last_seen_at`), and `not_seen_this_run` semantics without deletion. |
-| **7** | **Content Router** | [`assignments/08_routing/router_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/08_routing/router_notes.md)<br>[`assignments/08_routing/content_router.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/08_routing/content_router.py) | Structural classification into `event`, `announcement`, `faculty`, `pdf_document`, `external_link`, `unknown` without topic bias. |
-| **8** | **Detail Parser** | [`assignments/10_adapter/central_aggregator_adapter.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/10_adapter/central_aggregator_adapter.py) | Dedicated event item parsing logic extracting title, date, venue, abstract, speaker, and organizer sections. |
-| **9** | **Person Entity Extraction** | [`assignments/05_extraction/extraction_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/05_extraction/extraction_notes.md)<br>[`assignments/05_extraction/entity_extractor.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/05_extraction/entity_extractor.py) | Parses speakers, chairs, panelists, and raw affiliations strictly from explicit text with verbatim provenance. |
-| **10** | **Organization Entity Extraction** | [`assignments/05_extraction/extraction_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/05_extraction/extraction_notes.md)<br>[`assignments/05_extraction/entity_extractor.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/05_extraction/entity_extractor.py) | Extracts schools, centres, and partner organizations without inferring unstated affiliations. |
-| **11** | **Entity Relationship Schema** | [`assignments/06_entities/entity_schema.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/06_entities/entity_schema.md)<br>[`assignments/06_entities/entity_relational_store.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/06_entities/entity_relational_store.py) | Relational SQLite schema with composite keys `(item_id, person_id, role)` and index-backed checkpoint queries. |
-| **12** | **Tests and Fixtures** | All `assignments/*/test_*.py` and `fixtures/` | 10 independent test suites with offline HTML/RSS/XML/JSON fixtures covering 69 test cases with 100% pass rate. |
-| **13** | **Logs** | [`assignments/10_adapter/aggregator.log`](file:///home/kresler/Documents/SSRISS/week_3/assignments/10_adapter/aggregator.log)<br>[`assignments/12_integration/integration_run.log`](file:///home/kresler/Documents/SSRISS/week_3/assignments/12_integration/integration_run.log) | Structured audit log records with timestamps, log levels, run phases, scope decisions, and extraction counts. |
-| **14** | **Run Metrics** | [`assignments/09_metrics/run_summary_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/assignments/09_metrics/run_summary_notes.md)<br>[`assignments/09_metrics/run_summary.py`](file:///home/kresler/Documents/SSRISS/week_3/assignments/09_metrics/run_summary.py) | Structured run health summary distinguishing healthy steady-state runs from broken parsers. |
-| **15** | **README** | [`week_3/README.md`](file:///home/kresler/Documents/SSRISS/week_3/README.md) | This complete integration guide, architectural breakdown, and execution documentation. |
-| **16** | **Peer-Review Notes** | [`week_3/peer_review_notes.md`](file:///home/kresler/Documents/SSRISS/week_3/peer_review_notes.md) | Paired architectural review of Saanvi's IIMA aggregator addressing all 10 syllabus review questions. |
 
----
-
-## 3. Quickstart & Verification Commands
+## 2. Quickstart & Verification Commands
 
 ### Run End-to-End Integration Demonstration
 Executes a two-phase ingestion cycle (initial ingestion followed by incremental re-crawl) and prints relational queries:
@@ -91,7 +70,7 @@ Executes all 69 unit and integration test suites:
 
 ---
 
-## 4. Key Architectural Safeguards
+## 3. Key Architectural Safeguards
 
 1. **Conservative Entity Resolution (False Split Over False Merge):**
    - Weak similarity (e.g., `A. Rao` vs `Prof. Ananya Rao`) is classified as `possible match requiring review` and never merged automatically into an authoritative identity claim.
